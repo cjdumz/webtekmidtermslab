@@ -1,0 +1,109 @@
+body {
+	font: 16px/1.5 Arial, Helvetica,sans-serif;
+    margin: 0;
+	background-color: #3a6073;
+}
+
+/*HEADER*/
+
+.container {
+	width: 90%;
+	margin: 0;
+    overflow: hidden;
+	padding:0;
+}
+
+header {
+    background: #141e30;
+	color: #ffffff;
+    padding-top: 15px;
+	min-height: 70px;
+	border-bottom: white 3px solid;
+	overflow: auto;
+	margin-bottom: 0;   
+}
+
+header span {
+	font-size: 35px;
+	color: #3498db;
+}
+
+h1{
+    margin: 20px;
+}
+
+/* LAYOUT FOR BRACKETS */
+
+main{
+  display:flex;
+  flex-direction:row;
+  padding: 10px;
+}
+.round{
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  width:200px;
+  list-style:none;
+  padding:0;
+}
+
+/* BRACKETS*/
+
+.round .space{ 
+    flex-grow:1; 
+}
+.round .space:first-child,
+.round .space:last-child{ 
+    flex-grow:.5; 
+}
+
+.round .team-space{
+    flex-grow:1;
+  }
+
+/* STYLE */
+
+li.team {
+  padding-left: 20px;
+}
+
+li.team-top{ 
+border-bottom: 3px solid #fff; 
+}
+
+li.team-space{ 
+border-right:3px solid #fff;
+min-height:40px;
+  }
+
+li.team-bottom{ 
+border-top:3px solid #fff;
+  }
+
+/* BUTTON */
+
+.button {
+  padding: 15px 25px;
+  font-size: 24px;
+  text-align: center;
+  cursor: pointer;
+  outline: none;
+  color: #fff;
+  background-color: #141e30;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+  height: 50px;
+  margin: 250px;
+  margin-left: 70px;
+}
+
+.button:hover{
+  background-color: #3498db
+}
+
+.button:active {
+  background-color: #141e30;
+  box-shadow: 0 5px #fff;
+  transform: translateY(4px);
