@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="tournament bracket maker">
+    <meta name="author" content="webteklab2018 group2">
+
+<title></title>
+
+<!-- Bootstrap core CSS -->
+<link href="assets/css/bootstrap.css" rel="stylesheet">
+
+<!-- Custom styles for this template -->
+<link href="assets/css/main.css" rel="stylesheet">
+
+<script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+<script src="assets/js/hover.zoom.js"></script>
+<script src="assets/js/hover.zoom.conf.js"></script>
+
+<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!--[if lt IE 9]>
+<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+<script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+<![endif]-->
+</head>
+<body>
+    <!-- Static navbar -->
+    <div class="navbar navbar-inverse navbar-static-top">
+        <div class="container">
+            <div class="col-md-12" style="text-align: center;">
+                <label><h3>Tournament Bracket Generator</h3></label><br><br>
+            </div>
+                <table>
+                <div class="col-md-12">
+                <tr>
+                <th><label>Number of  Teams</label>
+                    <form name="form1">
+                    <select class="form-control" id = "opts" onChange="showForm()" name="numberOfTeams">
+                        <option disabled selected>How many teams:</option>
+                        <option value="1">4</option>
+                        <option value="2">8</option>
+                        <option value="3">16</option>
+                    </select>
+                    </form>
+                </th>
+                </tr>
+                </div>
+            </table>
+        </div>
+    </div>
+
+
+	   <div id = "f1" style="display:none">
+           <div id="ww">
+	           <div class="container">
+                    <div style="text-align: center">    
+                        <div class="col-md-12" >
+                            <label><h3>Tournament Name</h3></label>
+                            <h3><input type="text" name="tourname" size="35"></h3>
+                        </div>
+                        <div class="col-md-12">
+                            <label><h4>Date</h4></label>
+                            <h4><input type="date" name="tourdate"></h4>
+                        </div>
+                   </div>
+                   <label><h4>Game Bracket</h4></label><br>
+                   <div class="row">
+                       <div class="col-1-8">
+                           <div ondrop="drop(event)" ondragover="allowDrop(event)">
+                           <ul class="matchup">
+                               <li><input id="drag1" draggable="true" ondragstart="drag(event)" 
+                                          type="text" name="tourname" maxlength="12" size="12"></li>
+                               <li><input id="drag2" draggable="true" ondragstart="drag(event)" 
+                                          type="text" name="tourname" maxlength="12" size="12"></li>
+                           </ul>
+                           <ul class="matchup">
+                               <li><input id="drag3" draggable="true" ondragstart="drag(event)" 
+                                          type="text" name="tourname" maxlength="12" size="12"></li>
+                               <li><input id="drag4" draggable="true" ondragstart="drag(event)" 
+                                          type="text" name="tourname" maxlength="12" size="12"></li>
+                           </ul>
+                           </div>
+                       </div>
+                       <div class="col-1-8">
+                           <div class="round-two-top">
+                               <ul class="matchup">
+                                   <div id="droptarget" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+                                   <div id="droptarget" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+                               </ul>
+                           </div>
+                       </div>
+                       <div class="col-1-8">
+                           <div class="round-two-top">
+                               <ul class="matchup">
+                                   <div id="margin1">
+                                        <label>Winner!
+                                            <div id="droptarget" ondrop="drop(event)" ondragover="allowDrop(event)"></div></label>
+                                   </div>
+                               </ul>
+                           </div>
+                       </div>
+                   </div><br><br><!-- /row -->
+                   <div style="text-align: left"><button class="btn btn-primary" onclick="myFunction()">Print</button></div>
+               </div> <!-- /container -->
+           </div><!-- /ww -->
+    </div>
+
+    <div id = "f2" style="display:none">
+        <div id="ww">
+            <div class="container">
+                <div style="text-align: center">
+                    <div class="col-md-12">
+                        <label><h3>Tournament Name</h3></label>
+                        <h3><input type="text" name="tourname" size="35"></h3>
+                    </div>
+                    <div class="col-md-12">
+                        <label><h4>Date</h4></label>
+                        <h4><input type="date" name="tourdate"></h4>
+                    </div>
+                </div>
+                <label><h4>Game Bracket</h4></label><br><br>
+                <div class="row">
+                    <div class="col-1-8">
+                        <div ondrop="drop(event)" ondragover="allowDrop(event)">
+                            <ul class="matchup">
+                               <li><input id="drag5" draggable="true" ondragstart="drag(event)" 
+                                          type="text" name="tourname" maxlength="12" size="12"></li>
+                               <li><input id="drag6" draggable="true" ondragstart="drag(event)" 
+                                          type="text" name="tourname" maxlength="12" size="12"></li>
+                            </ul>
+                            <ul class="matchup">
+                               <li><input id="drag7" draggable="true" ondragstart="drag(event)" 
+                                          type="text" name="tourname" maxlength="12" size="12"></li>
+                               <li><input id="drag8" draggable="true" ondragstart="drag(event)" 
+                                          type="text" name="tourname" maxlength="12" size="12"></li>
+                            </ul>
+                            <ul class="matchup">
+                               <li><input id="drag9" draggable="true" ondragstart="drag(event)" 
+                                          type="text" name="tourname" maxlength="12" size="12"></li>
+                               <li><input id="drag10" draggable="true" ondragstart="drag(event)" 
+                                          type="text" name="tourname" maxlength="12" size="12"></li>
+                            </ul>
+                            <ul class="matchup">
+                               <li><input id="drag11" draggable="true" ondragstart="drag(event)" 
+                                          type="text" name="tourname" maxlength="12" size="12"></li>
+                               <li><input id="drag12" draggable="true" ondragstart="drag(event)" 
+                                          type="text" name="tourname" maxlength="12" size="12"></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-1-8">
+                        <div class="round-two-top">
+                            <ul class="matchup">
+                                <div id="droptarget" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+                                <div id="droptarget" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+                            </ul>
+                        </div>
+                        <div class="round-two-bottom">
+                            <ul class="matchup round-two-bottom">
+                                <div id="margin2">
+                                <div id="droptarget" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+                                <div id="droptarget" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+                                </div>
+                            </ul>
+                        </div>   
+                    </div>
+                    <div class="col-1-8 ">
+                        <div class="round-three">
+                            <ul class="matchup">
+                                <div id="margin3">
+                                <div id="droptarget" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+                                <div id="droptarget" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+                                </div>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-1-8 ">
+                        <div class="round-three">
+                            <ul class="matchup">
+                                <div id="margin4">
+                                <label>Winner!
+                                    <div id="droptarget" ondrop="drop(event)" ondragover="allowDrop(event)"></div></label>
+                                </div>
+                            </ul>
+                        </div>
+                    </div>
+                </div><br><br><!-- /row -->
+                <div style="text-align: left"><button class="btn btn-primary" onclick="myFunction()">Print</button></div>
+            </div> <!-- /container -->
+        </div><!-- /ww -->
+    </div>
+    
+    <div id = "f3" style="display:none">
+        <div id="ww">
+	       <div class="container">
+                <div style="text-align: center">
+                    <div class="col-md-12">
+                        <label><h3>Tournament Name</h3></label>
+                        <h3><input type="text" name="tourname" size="35"></h3>
+                    </div>
+                    <div class="col-md-12">
+                        <label><h4>Date</h4></label>
+                        <h4><input type="date" name="tourdate"></h4>
+                    </div>
+                </div>
+               <label><h4>Game Bracket</h4></label>
+               <div class="row">
+                   <div class="col-1-8">      
+                        <div ondrop="drop(event)" ondragover="allowDrop(event)">
+                            <ul class="matchup">
+                               <li><input id="drag13" draggable="true" ondragstart="drag(event)" 
+                                          type="text" name="tourname" maxlength="12" size="12"></li>
+                               <li><input id="drag14" draggable="true" ondragstart="drag(event)" 
+                                          type="text" name="tourname" maxlength="12" size="12"></li>
+                            </ul>
+                            <ul class="matchup">
+                               <li><input id="drag15" draggable="true" ondragstart="drag(event)" 
+                                          type="text" name="tourname" maxlength="12" size="12"></li>
+                               <li><input id="drag16" draggable="true" ondragstart="drag(event)" 
+                                          type="text" name="tourname" maxlength="12" size="12"></li>
+                            </ul>
+                            <ul class="matchup">
+                               <li><input id="drag17" draggable="true" ondragstart="drag(event)" 
+                                          type="text" name="tourname" maxlength="12" size="12"></li>
+                               <li><input id="drag18" draggable="true" ondragstart="drag(event)" 
+                                          type="text" name="tourname" maxlength="12" size="12"></li>
+                            </ul>
+                            <ul class="matchup">
+                               <li><input id="drag19" draggable="true" ondragstart="drag(event)" 
+                                          type="text" name="tourname" maxlength="12" size="12"></li>
+                               <li><input id="drag20" draggable="true" ondragstart="drag(event)" 
+                                          type="text" name="tourname" maxlength="12" size="12"></li>
+                            </ul>
+                            <ul class="matchup">
+                               <li><input id="drag21" draggable="true" ondragstart="drag(event)" 
+                                          type="text" name="tourname" maxlength="12" size="12"></li>
+                               <li><input id="drag22" draggable="true" ondragstart="drag(event)" 
+                                          type="text" name="tourname" maxlength="12" size="12"></li>
+                            </ul>
+                            <ul class="matchup">
+                               <li><input id="drag23" draggable="true" ondragstart="drag(event)" 
+                                          type="text" name="tourname" maxlength="12" size="12"></li>
+                               <li><input id="drag24" draggable="true" ondragstart="drag(event)" 
+                                          type="text" name="tourname" maxlength="12" size="12"></li>
+                            </ul>
+                            <ul class="matchup">
+                               <li><input id="drag25" draggable="true" ondragstart="drag(event)" 
+                                          type="text" name="tourname" maxlength="12" size="12"></li>
+                               <li><input id="drag26" draggable="true" ondragstart="drag(event)" 
+                                          type="text" name="tourname" maxlength="12" size="12"></li>
+                            </ul>
+                            <ul class="matchup">
+                               <li><input id="drag27" draggable="true" ondragstart="drag(event)" 
+                                          type="text" name="tourname" maxlength="12" size="12"></li>
+                               <li><input id="drag28" draggable="true" ondragstart="drag(event)" 
+                                          type="text" name="tourname" maxlength="12" size="12"></li>
+                            </ul>
+                        </div>
+                   </div>
+                   <div class="col-1-8">
+                       <div class="round-two-top">
+                           <ul class="matchup">
+                               <div id="droptarget" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+                               <div id="droptarget" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+                           </ul>
+                       </div>
+                       <div class="round-two-bottom">
+                           <ul class="matchup round-two-bottom">
+                               <div id="margin5">
+                               <div id="droptarget" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+                               <div id="droptarget" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+                               </div>
+                           </ul>
+                       </div>
+                       <div class="round-two-bottom">
+                           <ul class="matchup round-two-bottom">
+                               <div id="margin6">
+                               <div id="droptarget" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+                               <div id="droptarget" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+                                </div>
+                           </ul>
+                       </div>
+                        <div class="round-two-bottom">
+                           <ul class="matchup round-two-bottom">
+                               <div id="margindown">
+                               <div id="droptarget" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+                               <div id="droptarget" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+                                </div>
+                           </ul>
+                       </div>
+                   </div>
+                   <div class="col-1-8 ">
+                       <div class="round-three">
+                           <ul class="matchup">
+                               <div id="margin7">
+                               <div id="droptarget" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+                               <div id="droptarget" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+                               </div>
+                           </ul>
+                       </div>
+                       <div class="round-two-bottom">
+                           <ul class="matchup">
+                               <div id="margin8">
+                               <div id="droptarget" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+                               <div id="droptarget" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+                               </div>
+                           </ul>
+                       </div>
+                   </div>
+                   <div class="col-1-8 "><br><br><br><br><br><br><br><br><br><br>
+                       <ul class="matchup">
+                           <div id="margin9">
+                           <div id="droptarget" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+                           <div id="droptarget" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+                           </div>
+                       </ul>
+                   </div>
+                   <div class="col-1-8 "><br><br><br><br><br><br><br><br><br><br>
+                       <ul class="matchup">
+                           <div id="margin10">
+                           <label>Winner!
+                               <div id="droptarget" ondrop="drop(event)" ondragover="allowDrop(event)"></div></label>
+                           </div>
+                       </ul>
+                   </div>
+               </div><br><br><!-- /row -->
+               <div style="text-align: left"><button class="btn btn-primary" onclick="myFunction()">Print</button></div>
+            </div> <!-- /container -->
+        </div><!-- /ww -->
+    </div>
+	
+	<!-- +++++ Footer Section +++++ -->
+	<div id="footer">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-4">
+					<h4>WebtekLab 2018</h4>
+				</div><!-- /col-lg-4 -->
+			</div>
+		</div>
+	</div>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+<script src="assets/js/bootstrap.min.js"></script>
+<script type="text/javascript">
+    function showForm() {
+        var selopt = document.getElementById("opts").value;
+        if (selopt == 1) {
+            document.getElementById("f1").style.display = "block";
+            document.getElementById("f2").style.display = "none";
+        }
+        if (selopt == 2) {
+            document.getElementById("f2").style.display = "block";
+            document.getElementById("f1").style.display = "none";
+        }
+        if (selopt == 3) {
+            document.getElementById("f3").style.display = "block";
+            document.getElementById("f2").style.display = "none";
+            document.getElementById("f1").style.display = "none";
+        }
+    }
+</script>
+    
+<script>
+function allowDrop(ev)
+{
+ev.preventDefault();
+}
+
+function drag(ev)
+{
+ev.dataTransfer.setData("Text",ev.target.id);
+}
+
+function drop(ev)
+{
+ev.preventDefault();
+var data=ev.dataTransfer.getData("Text");
+ev.target.appendChild(document.getElementById(data));
+}
+</script>
+
+    
+<script>
+    function myFunction() {
+    window.print();
+    }
+</script>
+
+
+</body>
+</html>
