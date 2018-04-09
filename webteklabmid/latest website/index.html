@@ -28,14 +28,14 @@
 <body>
     <!-- Static navbar -->
     <div class="navbar navbar-inverse navbar-static-top">
+        <img class="mySlides" src="assets/images/img_la.jpg">
+        <img class="mySlides" src="assets/images/img_ny.jpg">
+        <img class="mySlides" src="assets/images/img_chicago.jpg">
         <div class="container">
-            <div class="col-md-12" style="text-align: center;">
-                <label><h3>Tournament Bracket Generator</h3></label><br><br>
-            </div>
                 <table>
                 <div class="col-md-12">
                 <tr>
-                <th><label>Number of  Teams</label>
+                <th><label class="num-of-teams">Number of  Teams</label>
                     <form name="form1">
                     <select class="form-control" id = "opts" onChange="showForm()" name="numberOfTeams">
                         <option disabled selected>How many teams:</option>
@@ -389,6 +389,23 @@ ev.target.appendChild(document.getElementById(data));
     function myFunction() {
     window.print();
     }
+</script>
+
+<script>
+var myIndex = 0;
+carousel();
+
+function carousel() {
+    var i;
+    var x = document.getElementsByClassName("mySlides");
+    for (i = 0; i < x.length; i++) {
+       x[i].style.display = "none";  
+    }
+    myIndex++;
+    if (myIndex > x.length) {myIndex = 1}    
+    x[myIndex-1].style.display = "block";  
+    setTimeout(carousel, 2000); // Change image every 2 seconds
+}
 </script>
 
 
