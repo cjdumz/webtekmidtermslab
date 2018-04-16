@@ -1,0 +1,2216 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Matchmaking Generator</title>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<meta name="description" content="" />
+		<meta name="keywords" content="" />
+		<script src="js/skel.min.js"></script>
+		<script src="js/skel-panels.min.js"></script>
+		<script src="js/init.js"></script>
+	</head>
+	<body class="homepage">
+		<div id="wrapper">
+			
+			<!-- Header -->
+			<div id="header">
+				<div class="container"> 
+					
+					<!-- Logo -->
+					<div id="logo">
+						<h1><a href="" onclick="myReload()" style="text-align: center">Matchmaking Generator</a></h1>
+					</div>
+					
+					<!-- Nav -->
+					<nav id="nav">
+						<ul>
+							<li>
+                                <h2>Number of  Teams</h2><br>
+                                <form name="form1">
+                                    <div class="styled-select">
+                                    <select class="form-control" id = "opts" onChange="showForm()" name="numberOfTeams">
+                                        <option disabled selected>How many teams:</option>
+                                        <option value="1">4</option>
+                                        <option value="2">5</option>
+                                        <option value="3">6</option>
+                                        <option value="4">7</option>
+                                        <option value="5">8</option>
+                                        <option value="6">9</option>
+                                        <option value="7">10</option>
+                                        <option value="8">11</option>
+                                        <option value="9">12</option>
+                                        <option value="10">13</option>
+                                        <option value="11">14</option>
+                                        <option value="12">15</option>
+                                        <option value="13">16</option>
+                                    </select>
+                                    </div>
+                                </form>
+                            </li>
+						</ul>
+					</nav>
+				</div>
+			</div>
+			<!-- /Header -->
+			
+	   <div id = "f1" style="display:none">
+           <div id="page">
+	           <div class="container">
+                    <div style="text-align: center">  
+                        <div class="tourname">
+                            <h2>Tournament Name</h2><br>
+                            <h3><input type="text" name="tourname" size="35"></h3>
+                        </div>
+                        <div class="tourdate"><br>
+                            <label><h4>Date</h4></label>
+                            <h4><input type="date" name="tourdate"></h4>
+                        </div>
+                   </div>
+                   <label style="padding-left: 20px;">Team Brackets</label>
+                   <br>
+                   <br>
+                   <br> 
+                   <div class="row">
+                       <div class="col-1-8">
+                           <ul class="matchup">
+                               <table>
+                                <tr>
+                                    <th><Label>1)</Label></th>
+                               <th><li><input type="text" name="teamname" maxlength="12" size="12"></li></th>
+                                    
+                                   </tr>
+                                <tr>
+                                    <th><Label>2)</Label></th>
+                               <th><li><input type="text" name="teamname" maxlength="12" size="12"></li></th>
+                                    <th><p style="padding-left: 5px;" >&#x2198;</p></th>
+                                </tr>
+                                </table>
+                           </ul>
+                            <ul class="matchup">
+                               <table>
+                                <tr>
+                                    <th><Label>3)</Label></th>
+                               <th><li><input type="text" name="teamname" maxlength="12" size="12"></li></th>
+                                    <th><p style="padding-left: 5px;" >&#x2197;</p></th>
+                                   </tr>
+                                <tr>
+                                    <th><Label>4)</Label></th>
+                               <th><li><input type="text" name="teamname" maxlength="12" size="12"></li></th>
+                                </tr>
+                                </table>
+                           </ul>
+                        </div>
+                       <div class="col-1-8">
+                           <div class="round-two-top">
+                               <ul class="matchup">
+                               <li><input type="text" name="teamname" maxlength="12" size="12"></li>    
+                               <li><input type="text" name="teamname" maxlength="12" size="12"></li>
+                               </ul>
+                           </div>
+                       </div>
+                       <div class="col-1-8">
+                           <div class="round-two-top">
+                               <ul class="matchup">
+                                <Label>Winner!</Label>
+                               <li><input type="text" name="teamname" maxlength="12" size="12"></li> 
+                               </ul>
+                           </div>
+                       </div>
+                   </div><br><br><!-- /row -->
+                   <div style="text-align: center"><button class="button" onclick="myFunction()">Print</button></div>
+               </div> <!-- /container -->
+           </div>
+    </div>
+            
+        <div id = "f2" style="display:none">
+           <div id="page">
+	           <div class="container">
+                    <div style="text-align: center">  
+                        <div class="tourname">
+                            <h2>Tournament Name</h2><br>
+                            <h3><input type="text" name="tourname" size="35"></h3>
+                        </div>
+                        <div class="tourdate"><br>
+                            <label><h4>Date</h4></label>
+                            <h4><input type="date" name="tourdate"></h4>
+                        </div>
+                   </div>
+                   <label style="padding-left: 20px;">Team Brackets</label>
+                   <br>
+                   <br>
+                   <br> 
+                   <div class="row">
+                       <div class="col-1-8"><br>
+                             <ul class="matchup">
+                               <table>
+                                <tr>
+                                    <th><Label>4)</Label></th>
+                               <th><li><input type="text" name="teamname" maxlength="12" size="12"></li></th>
+                                    
+                                   </tr>
+                                <tr>
+                                    <th><Label>5)</Label></th>
+                               <th><li><input type="text" name="teamname" maxlength="12" size="12"></li></th>
+                                    <th><p style="padding-left: 5px;" >&#x2198;</p></th>    
+                                </tr>
+                                </table>
+                           </ul>
+                        </div>
+                       <div class="col-1-8"><br>
+                           <div class="round-two-top">
+                               <ul class="matchup">
+                               <table>
+                                <tr>
+                                    <th><Label></Label></th>
+                               <th><li><input type="text" name="teamname" maxlength="12" size="12"></li></th>
+                                   </tr>
+                                <tr>
+                                    <th><Label>1)</Label></th>
+                               <th><li><input type="text" name="teamname" maxlength="12" size="12"></li></th>
+                                    <th><p style="padding-left: 5px;" >&#x2198;</p></th>
+                                </tr>
+                                </table>
+                               </ul>
+                             <ul class="matchup">
+                               <table>
+                                <tr>
+                                    <th><Label>2)</Label></th>
+                               <th><li><input type="text" name="teamname" maxlength="12" size="12"></li></th>
+                                    <th><p style="padding-left: 5px;" >&#x2197;</p></th>
+                                   </tr>
+                                <tr>
+                                    <th><Label>3)</Label></th>
+                               <th><li><input type="text" name="teamname" maxlength="12" size="12"></li></th> 
+                                </tr>
+                                </table>
+                           </ul>
+                           </div>
+                       </div>
+                    <div class="col-1-8 ">
+                        <div class="round-two-top"><br><br><br><br>
+                            <ul class="matchup">
+                                    <li><input type="text" name="teamname" maxlength="12" size="12"></li>    
+                                    <li><input type="text" name="teamname" maxlength="12" size="12"></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-1-8 ">
+                        <div class="round-two-top"><br><br><br><br>
+                            <ul class="matchup">
+                                <label>Winner!</label>
+                                   <li><input type="text" name="teamname" maxlength="12" size="12"></li> 
+                            </ul>
+                        </div>
+                    </div>
+                   </div><br><br><!-- /row -->
+                   <div style="text-align: center"><button class="button" onclick="myFunction()">Print</button></div>
+               </div> <!-- /container -->
+           </div>
+        </div>
+            
+            
+        <div id = "f3" style="display:none">
+           <div id="page">
+	           <div class="container">
+                    <div style="text-align: center">  
+                        <div class="tourname">
+                            <h2>Tournament Name</h2><br>
+                            <h3><input type="text" name="tourname" size="35"></h3>
+                        </div>
+                        <div class="tourdate"><br>
+                            <label><h4>Date</h4></label>
+                            <h4><input type="date" name="tourdate"></h4>
+                        </div>
+                   </div>
+                   <label style="padding-left: 20px;">Team Brackets</label>
+                   <br>
+                   <br>
+                   <br> 
+                   <div class="row">
+                       <div class="col-1-8"><br>
+                           <ul class="matchup">
+                               <table>
+                                <tr>
+                                    <th><Label>3)</Label></th>
+                               <th><li><input type="text" name="teamname" maxlength="12" size="12"></li></th>
+                                    
+                                   </tr>
+                                <tr>
+                                    <th><Label>4)</Label></th>
+                               <th><li><input type="text" name="teamname" maxlength="12" size="12"></li></th>
+                                    <th><p style="padding-left: 5px;" >&#x2198;</p></th>
+                                </tr>
+                                </table>
+                           </ul>
+                            <ul class="matchup">
+                               <table>
+                                <tr>
+                                    <th><Label>5)</Label></th>
+                               <th><li><input type="text" name="teamname" maxlength="12" size="12"></li></th>
+                                   </tr>
+                                <tr>
+                                    <th><Label>6)</Label></th>
+                               <th><li><input type="text" name="teamname" maxlength="12" size="12"></li></th>
+                                    <th><p style="padding-left: 5px;" >&#x2198;</p></th>
+                                </tr>
+                                </table>
+                           </ul>
+                        </div>
+                       <div class="col-1-8">
+                           <div class="round-two-top"><br>
+                               <ul class="matchup">
+                               <table>
+                                <tr>
+                                    <th><Label></Label></th>
+                               <th><li><input type="text" name="teamname" maxlength="12" size="12"></li></th>
+                                   </tr>
+                                <tr>
+                                    <th><Label>1)</Label></th>
+                               <th><li><input type="text" name="teamname" maxlength="12" size="12"></li></th>
+                                    <th><p style="padding-left: 5px;" >&#x2198;</p></th>
+                                </tr>
+                                </table>
+                               </ul>
+                                <ul class="matchup">
+                               <table>
+                                <tr>
+                                    <th><Label></Label></th>
+                               <th><li><input type="text" name="teamname" maxlength="12" size="12"></li></th>
+                                    <th><p style="padding-left: 5px;" >&#x2197;</p></th>
+                                   </tr>
+                                <tr>
+                                    <th><Label>2)</Label></th>
+                               <th><li><input type="text" name="teamname" maxlength="12" size="12"></li></th>
+                                </tr>
+                                </table>
+                               </ul>
+                                   
+                           </div>
+                       </div>
+                    <div class="col-1-8 ">
+                        <div class="round-two-top" style="padding-top: 100px;">
+                            <ul class="matchup">
+                                    <li><input type="text" name="teamname" maxlength="12" size="12"></li>    
+                                    <li><input type="text" name="teamname" maxlength="12" size="12"></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-1-8 ">
+                        <div class="round-two-top" style="padding-top: 100px;">
+                            <ul class="matchup">
+                                <label>Winner!</label>
+                                   <li><input type="text" name="teamname" maxlength="12" size="12"></li> 
+                            </ul>
+                        </div>
+                    </div>
+                   </div><br><br><!-- /row -->
+                   <div style="text-align: center"><button class="button" onclick="myFunction()">Print</button></div>
+               </div> <!-- /container -->
+           </div>
+        </div>
+            
+        <div id = "f4" style="display:none">
+           <div id="page">
+	           <div class="container">
+                    <div style="text-align: center">  
+                        <div class="tourname">
+                            <h2>Tournament Name</h2><br>
+                            <h3><input type="text" name="tourname" size="35"></h3>
+                        </div>
+                        <div class="tourdate"><br>
+                            <label><h4>Date</h4></label>
+                            <h4><input type="date" name="tourdate"></h4>
+                        </div>
+                   </div>
+                   <label style="padding-left: 20px;">Team Brackets</label>
+                   <br>
+                   <br>
+                   <br> 
+                   <div class="row">
+                       <div class="col-1-8"><br>
+                           <ul class="matchup">
+                               <table>
+                                <tr>
+                                    <th><Label>2)</Label></th>
+                               <th><li><input type="text" name="teamname" maxlength="12" size="12"></li></th>
+                                    
+                                   </tr>
+                                <tr>
+                                    <th><Label>3)</Label></th>
+                               <th><li><input type="text" name="teamname" maxlength="12" size="12"></li></th>
+                                    <th><p style="padding-left: 5px;" >&#x2198;</p></th>
+                                </tr>
+                                </table>
+                           </ul><br>
+                           <ul class="matchup">
+                               <table>
+                                <tr>
+                                    <th><Label>4)</Label></th>
+                               <th><li><input type="text" name="teamname" maxlength="12" size="12"></li></th>
+                                    
+                                   </tr>
+                                <tr>
+                                    <th><Label>5)</Label></th>
+                               <th><li><input type="text" name="teamname" maxlength="12" size="12"></li></th>
+                                    <th><p style="padding-left: 5px;" >&#x2198;</p></th>
+                                </tr>
+                                </table>
+                           </ul>
+                               <ul class="matchup" style="padding-left: 15px;">
+                               <table>
+                                <tr>
+                                    <th><Label>6</Label></th>
+                               <th><li><input type="text" name="teamname" maxlength="12" size="12"></li></th>
+                                    <th><p style="padding-left: 5px;" >&#x2197;</p></th>
+                                   </tr>
+                                <tr>
+                                    <th><Label>7</Label></th>
+                               <th><li><input type="text" name="teamname" maxlength="12" size="12"></li></th>
+                                </tr>
+                                </table>
+                               </ul>  
+                        </div>
+                       <div class="col-1-8">
+                           <div class="round-two-top" ><br>
+                               <ul class="matchup">
+                               <table>
+                                <tr>
+                                    <th><Label></Label></th>
+                               <th><li><input type="text" name="teamname" maxlength="12" size="12"></li></th>
+                                   </tr>
+                                <tr>
+                                    <th><Label>1)</Label></th>
+                               <th><li><input type="text" name="teamname" maxlength="12" size="12"></li></th>
+                                    <th><p style="padding-left: 5px;" >&#x2198;</p></th>
+                                </tr>
+                                </table>
+                               </ul>
+                               <ul class="matchup" style="padding-left: 25px;"><br>
+                               <table>
+                                <tr>
+                                    <th><Label></Label></th>
+                               <th><li><input type="text" name="teamname" maxlength="12" size="12"></li></th>
+                                    <th><p style="padding-left: 5px;" >&#x2197;</p></th>
+                                   </tr>
+                                <tr>
+                                    <th><Label></Label></th>
+                               <th><li><input type="text" name="teamname" maxlength="12" size="12"></li></th>
+                                </tr>
+                                </table>
+                               </ul>  
+                           </div>
+                       </div>
+                    <div class="col-1-8 ">
+                        <div class="round-two-top" style="padding-top: 110px;">
+                            <ul class="matchup" >
+                                    <li><input type="text" name="teamname" maxlength="12" size="12"></li>    
+                                    <li><input type="text" name="teamname" maxlength="12" size="12"></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-1-8 ">
+                        <div class="round-two-top" style="padding-top: 110px;">
+                            <ul class="matchup">
+                                <label>Winner!</label>
+                                   <li><input type="text" name="teamname" maxlength="12" size="12"></li> 
+                            </ul>
+                        </div>
+                    </div>
+                   </div><br><br><!-- /row -->
+                   <div style="text-align: center"><button class="button" onclick="myFunction()">Print</button></div>
+               </div> <!-- /container -->
+           </div>
+        </div>
+            
+            
+        <div id = "f5" style="display:none">
+           <div id="page">
+	           <div class="container">
+                    <div style="text-align: center">  
+                        <div class="tourname">
+                            <h2>Tournament Name</h2><br>
+                            <h3><input type="text" name="tourname" size="35"></h3>
+                        </div>
+                        <div class="tourdate"><br>
+                            <label><h4>Date</h4></label>
+                            <h4><input type="date" name="tourdate"></h4>
+                        </div>
+                   </div>
+                   <label style="padding-left: 20px;">Team Brackets</label>
+                   <br>
+                   <br>
+                   <br> 
+                   <div class="row">
+                       <div class="col-1-8">
+                           <ul class="matchup">
+                               <table>
+                                <tr>
+                                    <th><Label>1)</Label></th>
+                               <th><li><input type="text" name="teamname" maxlength="12" size="12"></li></th>
+                                    
+                                   </tr>
+                                <tr>
+                                    <th><Label>2)</Label></th>
+                               <th><li><input type="text" name="teamname" maxlength="12" size="12"></li></th>
+                                    <th><p style="padding-left: 5px;" >&#x2198;</p></th>
+                                </tr>
+                                </table>
+                           </ul>
+                            <ul class="matchup">
+                               <table>
+                                <tr>
+                                    <th><Label>3)</Label></th>
+                               <th><li><input type="text" name="teamname" maxlength="12" size="12"></li></th>
+                                    <th><p style="padding-left: 5px;" >&#x2197;</p></th>
+                                   </tr>
+                                <tr>
+                                    <th><Label>4)</Label></th>
+                               <th><li><input type="text" name="teamname" maxlength="12" size="12"></li></th>
+                                </tr>
+                                </table>
+                           </ul>
+                            <ul class="matchup">
+                               <table>
+                                <tr>
+                                    <th><Label>5)</Label></th>
+                               <th><li><input type="text" name="teamname" maxlength="12" size="12"></li></th>
+                                    
+                                   </tr>
+                                <tr>
+                                    <th><Label>6)</Label></th>
+                               <th><li><input type="text" name="teamname" maxlength="12" size="12"></li></th>
+                                    <th><p style="padding-left: 5px;" >&#x2198;</p></th>
+                                </tr>
+                                </table>
+                           </ul>
+                            <ul class="matchup">
+                               <table>
+                                <tr>
+                                    <th><Label>7)</Label></th>
+                               <th><li><input type="text" name="teamname" maxlength="12" size="12"></li></th>
+                                    <th><p style="padding-left: 5px;" >&#x2197;</p></th>
+                                   </tr>
+                                <tr>
+                                    <th><Label>8)</Label></th>
+                               <th><li><input type="text" name="teamname" maxlength="12" size="12"></li></th>
+                                </tr>
+                                </table>
+                           </ul>
+                        </div>
+                       <div class="col-1-8">
+                           <div class="round-two-top">
+                               <ul class="matchup">
+                               <table>
+                                <tr>
+                                    <th><Label></Label></th>
+                               <th><li><input type="text" name="teamname" maxlength="12" size="12"></li></th>
+                                   </tr>
+                                <tr>
+                                    <th><Label></Label></th>
+                               <th><li><input type="text" name="teamname" maxlength="12" size="12"></li></th>
+                                    <th><p style="padding-left: 5px;" >&#x2198;</p></th>
+                                </tr>
+                                </table>
+                               </ul>
+                           </div>
+                            <div class="round-two-top" style="padding-top: 80px;">
+                               <ul class="matchup">
+                               <table>
+                                <tr>
+                                    <th><Label></Label></th>
+                               <th><li><input type="text" name="teamname" maxlength="12" size="12"></li></th>
+                                    <th><p style="padding-left: 5px;" >&#x2197;</p></th>
+                                   </tr>
+                                <tr>
+                                    <th><Label></Label></th>
+                               <th><li><input type="text" name="teamname" maxlength="12" size="12"></li></th>
+                                </tr>
+                                </table>
+                               </ul>
+                           </div>
+                       </div>
+                        <div class="col-1-8">
+                           <div class="round-two-top" style="padding-top: 125px;">
+                               <ul class="matchup">
+                                <li><input type="text" name="teamname" maxlength="12" size="12"></li>
+                               <li><input type="text" name="teamname" maxlength="12" size="12"></li> 
+                               </ul>
+                           </div>
+                       </div>
+                       <div class="col-1-8">
+                           <div class="round-two-top" style="padding-top: 120px;">
+                               <ul class="matchup">
+                                <Label>Winner!</Label>
+                               <li><input type="text" name="teamname" maxlength="12" size="12"></li> 
+                               </ul>
+                           </div>
+                       </div>
+                   </div><br><br><!-- /row -->
+                   <div style="text-align: center"><button class="button" onclick="myFunction()">Print</button></div>
+               </div> <!-- /container -->
+           </div>
+    </div>
+            
+    <div id = "f6" style="display:none">
+           <div id="page">
+	           <div class="container">
+                    <div style="text-align: center">  
+                        <div class="tourname">
+                            <h2>Tournament Name</h2><br>
+                            <h3><input type="text" name="tourname" size="35"></h3>
+                        </div>
+                        <div class="tourdate"><br>
+                            <label><h4>Date</h4></label>
+                            <h4><input type="date" name="tourdate"></h4>
+                        </div>
+                   </div>
+                   <label style="padding-left: 20px;">Team Brackets</label>
+                   <br>
+                   <br>
+                   <br> 
+                   <div class="row">
+                    <div class="col-1-8" >
+                           <ul class="matchup" ><br>
+                               <table>
+                                <tr>
+                                    <th><Label>8)</Label></th>
+                               <th><li><input type="text" name="teamname" maxlength="12" size="12"></li></th>
+                                    <th><p style="padding-left: 5px;" >&#x2197;</p></th>
+                                   </tr>
+                                <tr>
+                                    <th><Label>9)</Label></th>
+                               <th><li><input type="text" name="teamname" maxlength="12" size="12"></li></th>
+                                </tr>
+                                </table>
+                           </ul>
+                        </div>
+                       <div class="col-1-8" >
+                           <ul class="matchup">
+                               <table>
+                                <tr>
+                                    <th><Label></Label></th>
+                               <th><li><input type="text" name="teamname" maxlength="12" size="12"></li></th>
+                                    
+                                   </tr>
+                                <tr>
+                                    <th><Label>1)</Label></th>
+                               <th><li><input type="text" name="teamname" maxlength="12" size="12"></li></th>
+                                    <th><p style="padding-left: 5px;" >&#x2198;</p></th>
+                                </tr>
+                                </table>
+                           </ul>
+                            <ul class="matchup">
+                               <table>
+                                <tr>
+                                    <th><Label>2)</Label></th>
+                               <th><li><input type="text" name="teamname" maxlength="12" size="12"></li></th>
+                                    <th><p style="padding-left: 5px;" >&#x2197;</p></th>
+                                   </tr>
+                                <tr>
+                                    <th><Label>3)</Label></th>
+                               <th><li><input type="text" name="teamname" maxlength="12" size="12"></li></th>
+                                </tr>
+                                </table>
+                           </ul>
+                            <ul class="matchup">
+                               <table>
+                                <tr>
+                                    <th><Label>4)</Label></th>
+                               <th><li><input type="text" name="teamname" maxlength="12" size="12"></li></th>
+                                    
+                                   </tr>
+                                <tr>
+                                    <th><Label>5)</Label></th>
+                               <th><li><input type="text" name="teamname" maxlength="12" size="12"></li></th>
+                                    <th><p style="padding-left: 5px;" >&#x2198;</p></th>
+                                </tr>
+                                </table>
+                           </ul>
+                            <ul class="matchup">
+                               <table>
+                                <tr>
+                                    <th><Label>6)</Label></th>
+                               <th><li><input type="text" name="teamname" maxlength="12" size="12"></li></th>
+                                    <th><p style="padding-left: 5px;" >&#x2197;</p></th>
+                                   </tr>
+                                <tr>
+                                    <th><Label>7)</Label></th>
+                               <th><li><input type="text" name="teamname" maxlength="12" size="12"></li></th>
+                                </tr>
+                                </table>
+                           </ul>
+                        </div>
+                       <div class="col-1-8">
+                           <div class="round-two-top">
+                               <ul class="matchup">
+                               <table>
+                                <tr>
+                                    <th><Label></Label></th>
+                               <th><li><input type="text" name="teamname" maxlength="12" size="12"></li></th>
+                                   </tr>
+                                <tr>
+                                    <th><Label></Label></th>
+                               <th><li><input type="text" name="teamname" maxlength="12" size="12"></li></th>
+                                    <th><p style="padding-left: 5px;" >&#x2198;</p></th>
+                                </tr>
+                                </table>
+                               </ul>
+                           </div>
+                            <div class="round-two-top" style="padding-top: 80px;">
+                               <ul class="matchup">
+                               <table>
+                                <tr>
+                                    <th><Label></Label></th>
+                               <th><li><input type="text" name="teamname" maxlength="12" size="12"></li></th>
+                                    <th><p style="padding-left: 5px;" >&#x2197;</p></th>
+                                   </tr>
+                                <tr>
+                                    <th><Label></Label></th>
+                               <th><li><input type="text" name="teamname" maxlength="12" size="12"></li></th>
+                                </tr>
+                                </table>
+                               </ul>
+                           </div>
+                       </div>
+                        <div class="col-1-8">
+                           <div class="round-two-top" style="padding-top: 125px;">
+                               <ul class="matchup">
+                                <li><input type="text" name="teamname" maxlength="12" size="12"></li>
+                               <li><input type="text" name="teamname" maxlength="12" size="12"></li> 
+                               </ul>
+                           </div>
+                       </div>
+                       <div class="col-1-8">
+                           <div class="round-two-top" style="padding-top: 120px;">
+                               <ul class="matchup">
+                                <Label>Winner!</Label>
+                               <li><input type="text" name="teamname" maxlength="12" size="12"></li> 
+                               </ul>
+                           </div>
+                       </div>
+                   </div><br><br><!-- /row -->
+                   <div style="text-align: center"><button class="button" onclick="myFunction()">Print</button></div>
+               </div> <!-- /container -->
+           </div>
+    </div>
+
+            
+            
+    <div id = "f7" style="display:none">
+           <div id="page">
+	           <div class="container">
+                    <div style="text-align: center">  
+                        <div class="tourname">
+                            <h2>Tournament Name</h2><br>
+                            <h3><input type="text" name="tourname" size="35"></h3>
+                        </div>
+                        <div class="tourdate"><br>
+                            <label><h4>Date</h4></label>
+                            <h4><input type="date" name="tourdate"></h4>
+                        </div>
+                   </div>
+                   <label style="padding-left: 20px;">Team Brackets</label>
+                   <br>
+                   <br>
+                   <br> 
+                   <div class="row">
+                    <div class="col-1-8" >
+                           <ul class="matchup"  style="padding-left: 20px;"><br>
+                               <table>
+                                <tr>
+                                    <th><Label>7)</Label></th>
+                               <th><li><input type="text" name="teamname" maxlength="12" size="12"></li></th>
+                                    <th><p style="padding-left: 5px;" >&#x2197;</p></th>
+                                   </tr>
+                                <tr>
+                                    <th><Label>8)</Label></th>
+                               <th><li><input type="text" name="teamname" maxlength="12" size="12"></li></th>
+                                </tr>
+                                </table>
+                           </ul>
+                        <ul class="matchup" style="padding-top: 85px;">
+                               <table>
+                                <tr>
+                                    <th><Label>9)</Label></th>
+                               <th><li><input type="text" name="teamname" maxlength="12" size="12"></li></th>
+                                    <th><p style="padding-left: 5px;" >&#x2197;</p></th>
+                                   </tr>
+                                <tr>
+                                    <th><Label>10)</Label></th>
+                               <th><li><input type="text" name="teamname" maxlength="12" size="12"></li></th>
+                                </tr>
+                                </table>
+                           </ul>
+                        </div>
+                       <div class="col-1-8" >
+                           <ul class="matchup">
+                               <table>
+                                <tr>
+                                    <th><Label></Label></th>
+                               <th><li><input type="text" name="teamname" maxlength="12" size="12"></li></th>
+                                    
+                                   </tr>
+                                <tr>
+                                    <th><Label>1)</Label></th>
+                               <th><li><input type="text" name="teamname" maxlength="12" size="12"></li></th>
+                                    <th><p style="padding-left: 5px;" >&#x2198;</p></th>
+                                </tr>
+                                </table>
+                           </ul>
+                            <ul class="matchup">
+                               <table>
+                                <tr>
+                                    <th><Label>3)</Label></th>
+                               <th><li><input type="text" name="teamname" maxlength="12" size="12"></li></th>
+                                    <th><p style="padding-left: 5px;" >&#x2197;</p></th>
+                                   </tr>
+                                <tr>
+                                    <th><Label>4)</Label></th>
+                               <th><li><input type="text" name="teamname" maxlength="12" size="12"></li></th>
+                                </tr>
+                                </table>
+                           </ul>
+                            <ul class="matchup">
+                               <table>
+                                <tr>
+                                    <th><Label></Label></th>
+                               <th><li><input type="text" name="teamname" maxlength="12" size="12"></li></th>
+                                    
+                                   </tr>
+                                <tr>
+                                    <th><Label>2)</Label></th>
+                               <th><li><input type="text" name="teamname" maxlength="12" size="12"></li></th>
+                                    <th><p style="padding-left: 5px;" >&#x2198;</p></th>
+                                </tr>
+                                </table>
+                           </ul>
+                            <ul class="matchup">
+                               <table>
+                                <tr>
+                                    <th><Label>5)</Label></th>
+                               <th><li><input type="text" name="teamname" maxlength="12" size="12"></li></th>
+                                    <th><p style="padding-left: 5px;" >&#x2197;</p></th>
+                                   </tr>
+                                <tr>
+                                    <th><Label>6)</Label></th>
+                               <th><li><input type="text" name="teamname" maxlength="12" size="12"></li></th>
+                                </tr>
+                                </table>
+                           </ul>
+                        </div>
+                       <div class="col-1-8">
+                           <div class="round-two-top">
+                               <ul class="matchup">
+                               <table>
+                                <tr>
+                                    <th><Label></Label></th>
+                               <th><li><input type="text" name="teamname" maxlength="12" size="12"></li></th>
+                                   </tr>
+                                <tr>
+                                    <th><Label></Label></th>
+                               <th><li><input type="text" name="teamname" maxlength="12" size="12"></li></th>
+                                    <th><p style="padding-left: 5px;" >&#x2198;</p></th>
+                                </tr>
+                                </table>
+                               </ul>
+                           </div>
+                            <div class="round-two-top" style="padding-top: 80px;">
+                               <ul class="matchup">
+                               <table>
+                                <tr>
+                                    <th><Label></Label></th>
+                               <th><li><input type="text" name="teamname" maxlength="12" size="12"></li></th>
+                                    <th><p style="padding-left: 5px;" >&#x2197;</p></th>
+                                   </tr>
+                                <tr>
+                                    <th><Label></Label></th>
+                               <th><li><input type="text" name="teamname" maxlength="12" size="12"></li></th>
+                                </tr>
+                                </table>
+                               </ul>
+                           </div>
+                       </div>
+                        <div class="col-1-8">
+                           <div class="round-two-top" style="padding-top: 125px;">
+                               <ul class="matchup">
+                                <li><input type="text" name="teamname" maxlength="12" size="12"></li>
+                               <li><input type="text" name="teamname" maxlength="12" size="12"></li> 
+                               </ul>
+                           </div>
+                       </div>
+                       <div class="col-1-8">
+                           <div class="round-two-top" style="padding-top: 120px;">
+                               <ul class="matchup">
+                                <Label>Winner!</Label>
+                               <li><input type="text" name="teamname" maxlength="12" size="12"></li> 
+                               </ul>
+                           </div>
+                       </div>
+                   </div><br><br><!-- /row -->
+                   <div style="text-align: center"><button class="button" onclick="myFunction()">Print</button></div>
+               </div> <!-- /container -->
+           </div>
+    </div>
+
+            
+    <div id = "f8" style="display:none">
+           <div id="page">
+	           <div class="container">
+                    <div style="text-align: center">  
+                        <div class="tourname">
+                            <h2>Tournament Name</h2><br>
+                            <h3><input type="text" name="tourname" size="35"></h3>
+                        </div>
+                        <div class="tourdate"><br>
+                            <label><h4>Date</h4></label>
+                            <h4><input type="date" name="tourdate"></h4>
+                        </div>
+                   </div>
+                   <label style="padding-left: 20px;">Team Brackets</label>
+                   <br>
+                   <br>
+                   <br> 
+                   <div class="row">
+                    <div class="col-1-8" >
+                           <ul class="matchup"  style="padding-left: 20px;"><br>
+                               <table>
+                                <tr>
+                                    <th><Label>6)</Label></th>
+                               <th><li><input type="text" name="teamname" maxlength="12" size="12"></li></th>
+                                    <th><p style="padding-left: 5px;" >&#x2197;</p></th>
+                                   </tr>
+                                <tr>
+                                    <th><Label>7)</Label></th>
+                               <th><li><input type="text" name="teamname" maxlength="12" size="12"></li></th>
+                                </tr>
+                                </table>
+                           </ul>
+                        <ul class="matchup" style="padding-top: 85px;  padding-left: 20px;">
+                               <table>
+                                <tr>
+                                    <th><Label>8)</Label></th>
+                               <th><li><input type="text" name="teamname" maxlength="12" size="12"></li></th>
+                                    <th><p style="padding-left: 5px;" >&#x2197;</p></th>
+                                   </tr>
+                                <tr>
+                                    <th><Label>9)</Label></th>
+                               <th><li><input type="text" name="teamname" maxlength="12" size="12"></li></th>
+                                </tr>
+                                </table>
+                           </ul>
+                        <ul class="matchup">
+                               <table>
+                                <tr>
+                                    <th><Label>10)</Label></th>
+                               <th><li><input type="text" name="teamname" maxlength="12" size="12"></li></th>
+                                    <th><p style="padding-left: 5px;" >&#x2197;</p></th>
+                                   </tr>
+                                <tr>
+                                    <th><Label>11)</Label></th>
+                               <th><li><input type="text" name="teamname" maxlength="12" size="12"></li></th>
+                                </tr>
+                                </table>
+                           </ul>
+                        </div>
+                       <div class="col-1-8" >
+                           <ul class="matchup">
+                               <table>
+                                <tr>
+                                    <th><Label></Label></th>
+                               <th><li><input type="text" name="teamname" maxlength="12" size="12"></li></th>
+                                    
+                                   </tr>
+                                <tr>
+                                    <th><Label>1)</Label></th>
+                               <th><li><input type="text" name="teamname" maxlength="12" size="12"></li></th>
+                                    <th><p style="padding-left: 5px;" >&#x2198;</p></th>
+                                </tr>
+                                </table>
+                           </ul>
+                            <ul class="matchup">
+                               <table>
+                                <tr>
+                                    <th><Label>4)</Label></th>
+                               <th><li><input type="text" name="teamname" maxlength="12" size="12"></li></th>
+                                    <th><p style="padding-left: 5px;" >&#x2197;</p></th>
+                                   </tr>
+                                <tr>
+                                    <th><Label>5)</Label></th>
+                               <th><li><input type="text" name="teamname" maxlength="12" size="12"></li></th>
+                                </tr>
+                                </table>
+                           </ul>
+                            <ul class="matchup">
+                               <table>
+                                <tr>
+                                    <th><Label></Label></th>
+                               <th><li><input type="text" name="teamname" maxlength="12" size="12"></li></th>
+                                    
+                                   </tr>
+                                <tr>
+                                    <th><Label>2)</Label></th>
+                               <th><li><input type="text" name="teamname" maxlength="12" size="12"></li></th>
+                                    <th><p style="padding-left: 5px;" >&#x2198;</p></th>
+                                </tr>
+                                </table>
+                           </ul>
+                            <ul class="matchup">
+                               <table>
+                                <tr>
+                                    <th><Label></Label></th>
+                               <th><li><input type="text" name="teamname" maxlength="12" size="12"></li></th>
+                                    <th><p style="padding-left: 5px;" >&#x2197;</p></th>
+                                   </tr>
+                                <tr>
+                                    <th><Label>3)</Label></th>
+                               <th><li><input type="text" name="teamname" maxlength="12" size="12"></li></th>
+                                </tr>
+                                </table>
+                           </ul>
+                        </div>
+                       <div class="col-1-8">
+                           <div class="round-two-top">
+                               <ul class="matchup">
+                               <table>
+                                <tr>
+                                    <th><Label></Label></th>
+                               <th><li><input type="text" name="teamname" maxlength="12" size="12"></li></th>
+                                   </tr>
+                                <tr>
+                                    <th><Label></Label></th>
+                               <th><li><input type="text" name="teamname" maxlength="12" size="12"></li></th>
+                                    <th><p style="padding-left: 5px;" >&#x2198;</p></th>
+                                </tr>
+                                </table>
+                               </ul>
+                           </div>
+                            <div class="round-two-top" style="padding-top: 80px;">
+                               <ul class="matchup">
+                               <table>
+                                <tr>
+                                    <th><Label></Label></th>
+                               <th><li><input type="text" name="teamname" maxlength="12" size="12"></li></th>
+                                    <th><p style="padding-left: 5px;" >&#x2197;</p></th>
+                                   </tr>
+                                <tr>
+                                    <th><Label></Label></th>
+                               <th><li><input type="text" name="teamname" maxlength="12" size="12"></li></th>
+                                </tr>
+                                </table>
+                               </ul>
+                           </div>
+                       </div>
+                        <div class="col-1-8">
+                           <div class="round-two-top" style="padding-top: 125px;">
+                               <ul class="matchup">
+                                <li><input type="text" name="teamname" maxlength="12" size="12"></li>
+                               <li><input type="text" name="teamname" maxlength="12" size="12"></li> 
+                               </ul>
+                           </div>
+                       </div>
+                       <div class="col-1-8">
+                           <div class="round-two-top" style="padding-top: 120px;">
+                               <ul class="matchup">
+                                <Label>Winner!</Label>
+                               <li><input type="text" name="teamname" maxlength="12" size="12"></li> 
+                               </ul>
+                           </div>
+                       </div>
+                   </div><br><br><!-- /row -->
+                   <div style="text-align: center"><button class="button" onclick="myFunction()">Print</button></div>
+               </div> <!-- /container -->
+           </div>
+    </div>
+            
+            
+    <div id = "f9" style="display:none">
+           <div id="page">
+	           <div class="container">
+                    <div style="text-align: center">  
+                        <div class="tourname">
+                            <h2>Tournament Name</h2><br>
+                            <h3><input type="text" name="tourname" size="35"></h3>
+                        </div>
+                        <div class="tourdate"><br>
+                            <label><h4>Date</h4></label>
+                            <h4><input type="date" name="tourdate"></h4>
+                        </div>
+                   </div>
+                   <label style="padding-left: 20px;">Team Brackets</label>
+                   <br>
+                   <br>
+                   <br> 
+                   <div class="row">
+                    <div class="col-1-8" >
+                           <ul class="matchup"  style="padding-left: 20px;" ><br>
+                               <table>
+                                <tr>
+                                    <th><Label>5)</Label></th>
+                               <th><li><input type="text" name="teamname" maxlength="12" size="12"></li></th>
+                                    <th><p style="padding-left: 5px;" >&#x2197;</p></th>
+                                   </tr>
+                                <tr>
+                                    <th><Label>6)</Label></th>
+                               <th><li><input type="text" name="teamname" maxlength="12" size="12"></li></th>
+                                </tr>
+                                </table>
+                           </ul>
+                        <ul class="matchup"  style="padding-left: 20px;">
+                               <table>
+                                <tr>
+                                    <th><Label>7)</Label></th>
+                               <th><li><input type="text" name="teamname" maxlength="12" size="12"></li></th>
+                                    <th><p style="padding-left: 5px;" >&#x2197;</p></th>
+                                   </tr>
+                                <tr>
+                                    <th><Label>8)</Label></th>
+                               <th><li><input type="text" name="teamname" maxlength="12" size="12"></li></th>
+                                </tr>
+                                </table>
+                           </ul>
+                        <ul class="matchup">
+                               <table>
+                                <tr>
+                                    <th><Label>9)</Label></th>
+                               <th><li><input type="text" name="teamname" maxlength="12" size="12"></li></th>
+                                    <th><p style="padding-left: 5px;" >&#x2197;</p></th>
+                                   </tr>
+                                <tr>
+                                    <th><Label>10)</Label></th>
+                               <th><li><input type="text" name="teamname" maxlength="12" size="12"></li></th>
+                                </tr>
+                                </table>
+                           </ul>
+                        <ul class="matchup">
+                               <table>
+                                <tr>
+                                    <th><Label>11)</Label></th>
+                               <th><li><input type="text" name="teamname" maxlength="12" size="12"></li></th>
+                                    <th><p style="padding-left: 5px;" >&#x2197;</p></th>
+                                   </tr>
+                                <tr>
+                                    <th><Label>12)</Label></th>
+                               <th><li><input type="text" name="teamname" maxlength="12" size="12"></li></th>
+                                </tr>
+                                </table>
+                           </ul>
+                        </div>
+                       <div class="col-1-8" >
+                           <ul class="matchup">
+                               <table>
+                                <tr>
+                                    <th><Label></Label></th>
+                               <th><li><input type="text" name="teamname" maxlength="12" size="12"></li></th>
+                                    
+                                   </tr>
+                                <tr>
+                                    <th><Label>1)</Label></th>
+                               <th><li><input type="text" name="teamname" maxlength="12" size="12"></li></th>
+                                    <th><p style="padding-left: 5px;" >&#x2198;</p></th>
+                                </tr>
+                                </table>
+                           </ul>
+                            <ul class="matchup">
+                               <table>
+                                <tr>
+                                    <th><Label></Label></th>
+                               <th><li><input type="text" name="teamname" maxlength="12" size="12"></li></th>
+                                    <th><p style="padding-left: 5px;" >&#x2197;</p></th>
+                                   </tr>
+                                <tr>
+                                    <th><Label>2)</Label></th>
+                               <th><li><input type="text" name="teamname" maxlength="12" size="12"></li></th>
+                                </tr>
+                                </table>
+                           </ul>
+                            <ul class="matchup">
+                               <table>
+                                <tr>
+                                    <th><Label></Label></th>
+                               <th><li><input type="text" name="teamname" maxlength="12" size="12"></li></th>
+                                    
+                                   </tr>
+                                <tr>
+                                    <th><Label>3)</Label></th>
+                               <th><li><input type="text" name="teamname" maxlength="12" size="12"></li></th>
+                                    <th><p style="padding-left: 5px;" >&#x2198;</p></th>
+                                </tr>
+                                </table>
+                           </ul>
+                            <ul class="matchup">
+                               <table>
+                                <tr>
+                                    <th><Label></Label></th>
+                               <th><li><input type="text" name="teamname" maxlength="12" size="12"></li></th>
+                                    <th><p style="padding-left: 5px;" >&#x2197;</p></th>
+                                   </tr>
+                                <tr>
+                                    <th><Label>4)</Label></th>
+                               <th><li><input type="text" name="teamname" maxlength="12" size="12"></li></th>
+                                </tr>
+                                </table>
+                           </ul>
+                        </div>
+                       <div class="col-1-8">
+                           <div class="round-two-top">
+                               <ul class="matchup">
+                               <table>
+                                <tr>
+                                    <th><Label></Label></th>
+                               <th><li><input type="text" name="teamname" maxlength="12" size="12"></li></th>
+                                   </tr>
+                                <tr>
+                                    <th><Label></Label></th>
+                               <th><li><input type="text" name="teamname" maxlength="12" size="12"></li></th>
+                                    <th><p style="padding-left: 5px;" >&#x2198;</p></th>
+                                </tr>
+                                </table>
+                               </ul>
+                           </div>
+                            <div class="round-two-top" style="padding-top: 80px;">
+                               <ul class="matchup">
+                               <table>
+                                <tr>
+                                    <th><Label></Label></th>
+                               <th><li><input type="text" name="teamname" maxlength="12" size="12"></li></th>
+                                    <th><p style="padding-left: 5px;" >&#x2197;</p></th>
+                                   </tr>
+                                <tr>
+                                    <th><Label></Label></th>
+                               <th><li><input type="text" name="teamname" maxlength="12" size="12"></li></th>
+                                </tr>
+                                </table>
+                               </ul>
+                           </div>
+                       </div>
+                        <div class="col-1-8">
+                           <div class="round-two-top" style="padding-top: 125px;">
+                               <ul class="matchup">
+                                <li><input type="text" name="teamname" maxlength="12" size="12"></li>
+                               <li><input type="text" name="teamname" maxlength="12" size="12"></li> 
+                               </ul>
+                           </div>
+                       </div>
+                       <div class="col-1-8">
+                           <div class="round-two-top" style="padding-top: 120px;">
+                               <ul class="matchup">
+                                <Label>Winner!</Label>
+                               <li><input type="text" name="teamname" maxlength="12" size="12"></li> 
+                               </ul>
+                           </div>
+                       </div>
+                   </div><br><br><!-- /row -->
+                   <div style="text-align: center"><button class="button" onclick="myFunction()">Print</button></div>
+               </div> <!-- /container -->
+           </div>
+    </div>
+            
+    
+<div id = "f10" style="display:none">
+           <div id="page">
+	           <div class="container">
+                    <div style="text-align: center">  
+                        <div class="tourname">
+                            <h2>Tournament Name</h2><br>
+                            <h3><input type="text" name="tourname" size="35"></h3>
+                        </div>
+                        <div class="tourdate"><br>
+                            <label><h4>Date</h4></label>
+                            <h4><input type="date" name="tourdate"></h4>
+                        </div>
+                   </div>
+                   <label style="padding-left: 20px;">Team Brackets</label>
+                   <br>
+                   <br>
+                   <br> 
+                   <div class="row">
+                    <div class="col-1-8" >
+                           <ul class="matchup" style="padding-left: 20px;">
+                               <table>
+                                <tr>
+                                    <th><Label>6)</Label></th>
+                               <th><li><input type="text" name="teamname" maxlength="12" size="12"></li></th>
+                                   </tr>
+                                <tr>
+                                    <th><Label>7)</Label></th>
+                               <th><li><input type="text" name="teamname" maxlength="12" size="12"></li></th>
+                                    <th><p style="padding-left: 5px;" >&#x2198;</p></th>
+                                </tr>
+                                </table>
+                           </ul>
+                        <ul class="matchup" >
+                               <table>
+                                <tr>
+                                    <th><Label>4)</Label></th>
+                               <th><li><input type="text" name="teamname" maxlength="12" size="12"></li></th>
+                                   </tr>
+                                <tr>
+                                    <th><Label>12)</Label></th>
+                               <th><li><input type="text" name="teamname" maxlength="12" size="12"></li></th>
+                                    <th><p style="padding-left: 5px;" >&#x2198;</p></th>
+                                </tr>
+                                </table>
+                           </ul>
+                        <ul class="matchup" >
+                               <table>
+                                <tr>
+                                    <th><Label>5)</Label></th>
+                               <th><li><input type="text" name="teamname" maxlength="12" size="12"></li></th>
+                                    <th><p style="padding-left: 5px;" >&#x2197;</p></th>
+                                   </tr>
+                                <tr>
+                                    <th><Label>13)</Label></th>
+                               <th><li><input type="text" name="teamname" maxlength="12" size="12"></li></th>
+                                </tr>
+                                </table>
+                           </ul>
+                        <ul class="matchup" style="padding-left: 20px;">
+                               <table>
+                                <tr>
+                                    <th><Label>8)</Label></th>
+                               <th><li><input type="text" name="teamname" maxlength="12" size="12"></li></th>
+                                    <th><p style="padding-left: 5px;" >&#x2197;</p></th>
+                                   </tr>
+                                <tr>
+                                    <th><Label>9)</Label></th>
+                               <th><li><input type="text" name="teamname" maxlength="12" size="12"></li></th>
+                                </tr>
+                                </table>
+                           </ul>
+                        <ul class="matchup">
+                               <table>
+                                <tr>
+                                    <th><Label>10)</Label></th>
+                               <th><li><input type="text" name="teamname" maxlength="12" size="12"></li></th>
+                                    <th><p style="padding-left: 5px;" >&#x2197;</p></th>
+                                   </tr>
+                                <tr>
+                                    <th><Label>11)</Label></th>
+                               <th><li><input type="text" name="teamname" maxlength="12" size="12"></li></th>
+                                </tr>
+                                </table>
+                           </ul>
+                        </div>
+                       <div class="col-1-8" style="padding-top: 40px;">
+                           <ul class="matchup" >
+                               <table>
+                                <tr>
+                                    <th><Label></Label></th>
+                               <th><li><input type="text" name="teamname" maxlength="12" size="12"></li></th>
+                                    
+                                   </tr>
+                                <tr>
+                                    <th><Label>1)</Label></th>
+                               <th><li><input type="text" name="teamname" maxlength="12" size="12"></li></th>
+                                    <th><p style="padding-left: 5px;" >&#x2198;</p></th>
+                                </tr>
+                                </table>
+                           </ul>
+                            <ul class="matchup" style="padding-left: 25px;">
+                               <table>
+                                <tr>
+                                    <th><Label></Label></th>
+                               <th><li><input type="text" name="teamname" maxlength="12" size="12"></li></th>
+                                    <th><p style="padding-left: 5px;" >&#x2197;</p></th>
+                                   </tr>
+                                <tr>
+                                    <th><Label></Label></th>
+                               <th><li><input type="text" name="teamname" maxlength="12" size="12"></li></th>
+                                </tr>
+                                </table>
+                           </ul>
+                            <ul class="matchup">
+                               <table>
+                                <tr>
+                                    <th><Label>2)</Label></th>
+                               <th><li><input type="text" name="teamname" maxlength="12" size="12"></li></th>
+                                    
+                                   </tr>
+                                <tr>
+                                    <th><Label></Label></th>
+                               <th><li><input type="text" name="teamname" maxlength="12" size="12"></li></th>
+                                    <th><p style="padding-left: 5px;" >&#x2198;</p></th>
+                                </tr>
+                                </table>
+                           </ul>
+                            <ul class="matchup">
+                               <table>
+                                <tr>
+                                    <th><Label>3)</Label></th>
+                               <th><li><input type="text" name="teamname" maxlength="12" size="12"></li></th>
+                                    <th><p style="padding-left: 5px;" >&#x2197;</p></th>
+                                   </tr>
+                                <tr>
+                                    <th><Label></Label></th>
+                               <th><li><input type="text" name="teamname" maxlength="12" size="12"></li></th>
+                                </tr>
+                                </table>
+                           </ul>
+                        </div>
+                       <div class="col-1-8" style="padding-top: 35px;">
+                           <div class="round-two-top">
+                               <ul class="matchup">
+                               <table>
+                                <tr>
+                                    <th><Label></Label></th>
+                               <th><li><input type="text" name="teamname" maxlength="12" size="12"></li></th>
+                                   </tr>
+                                <tr>
+                                    <th><Label></Label></th>
+                               <th><li><input type="text" name="teamname" maxlength="12" size="12"></li></th>
+                                    <th><p style="padding-left: 5px;" >&#x2198;</p></th>
+                                </tr>
+                                </table>
+                               </ul>
+                           </div>
+                            <div class="round-two-top" style="padding-top: 80px;">
+                               <ul class="matchup">
+                               <table>
+                                <tr>
+                                    <th><Label></Label></th>
+                               <th><li><input type="text" name="teamname" maxlength="12" size="12"></li></th>
+                                    <th><p style="padding-left: 5px;" >&#x2197;</p></th>
+                                   </tr>
+                                <tr>
+                                    <th><Label></Label></th>
+                               <th><li><input type="text" name="teamname" maxlength="12" size="12"></li></th>
+                                </tr>
+                                </table>
+                               </ul>
+                           </div>
+                       </div>
+                        <div class="col-1-8"  style="padding-top: 35px;">
+                           <div class="round-two-top" style="padding-top: 125px;">
+                               <ul class="matchup">
+                                <li><input type="text" name="teamname" maxlength="12" size="12"></li>
+                               <li><input type="text" name="teamname" maxlength="12" size="12"></li> 
+                               </ul>
+                           </div>
+                       </div>
+                       <div class="col-1-8">
+                           <div class="round-two-top" style="padding-top: 160px;">
+                               <ul class="matchup">
+                                <Label>Winner!</Label>
+                               <li><input type="text" name="teamname" maxlength="12" size="12"></li> 
+                               </ul>
+                           </div>
+                       </div>
+                   </div><br><br><!-- /row -->
+                   <div style="text-align: center"><button class="button" onclick="myFunction()">Print</button></div>
+               </div> <!-- /container -->
+           </div>
+    </div>
+            
+            
+<div id = "f11" style="display:none">
+           <div id="page">
+	           <div class="container">
+                    <div style="text-align: center">  
+                        <div class="tourname">
+                            <h2>Tournament Name</h2><br>
+                            <h3><input type="text" name="tourname" size="35"></h3>
+                        </div>
+                        <div class="tourdate"><br>
+                            <label><h4>Date</h4></label>
+                            <h4><input type="date" name="tourdate"></h4>
+                        </div>
+                   </div>
+                   <label style="padding-left: 20px;">Team Brackets</label>
+                   <br>
+                   <br>
+                   <br> 
+                   <div class="row">
+                    <div class="col-1-8" >
+                           <ul class="matchup" style="padding-left: 20px;">
+                               <table>
+                                <tr>
+                                    <th><Label>7)</Label></th>
+                               <th><li><input type="text" name="teamname" maxlength="12" size="12"></li></th>
+                                   </tr>
+                                <tr>
+                                    <th><Label>8)</Label></th>
+                               <th><li><input type="text" name="teamname" maxlength="12" size="12"></li></th>
+                                    <th><p style="padding-left: 5px;" >&#x2198;</p></th>
+                                </tr>
+                                </table>
+                           </ul>
+                        <ul class="matchup" >
+                               <table>
+                                <tr>
+                                    <th><Label>3)</Label></th>
+                               <th><li><input type="text" name="teamname" maxlength="12" size="12"></li></th>
+                                   </tr>
+                                <tr>
+                                    <th><Label>11)</Label></th>
+                               <th><li><input type="text" name="teamname" maxlength="12" size="12"></li></th>
+                                    <th><p style="padding-left: 5px;" >&#x2198;</p></th>
+                                </tr>
+                                </table>
+                           </ul>
+                        <ul class="matchup" >
+                               <table>
+                                <tr>
+                                    <th><Label>4)</Label></th>
+                               <th><li><input type="text" name="teamname" maxlength="12" size="12"></li></th>
+                                    <th><p style="padding-left: 5px;" >&#x2197;</p></th>
+                                   </tr>
+                                <tr>
+                                    <th><Label>12)</Label></th>
+                               <th><li><input type="text" name="teamname" maxlength="12" size="12"></li></th>
+                                </tr>
+                                </table>
+                           </ul>
+                        <ul class="matchup">
+                               <table>
+                                <tr>
+                                    <th><Label>9)</Label></th>
+                               <th><li><input type="text" name="teamname" maxlength="12" size="12"></li></th>
+                                   </tr>
+                                <tr>
+                                    <th><Label>10)</Label></th>
+                               <th><li><input type="text" name="teamname" maxlength="12" size="12"></li></th>
+                                    <th><p style="padding-left: 5px;" >&#x2198;</p></th>
+                                </tr>
+                                </table>
+                           </ul>
+                        <ul class="matchup">
+                               <table>
+                                <tr>
+                                    <th><Label>5)</Label></th>
+                               <th><li><input type="text" name="teamname" maxlength="12" size="12"></li></th>
+                                   </tr>
+                                <tr>
+                                    <th><Label>13)</Label></th>
+                               <th><li><input type="text" name="teamname" maxlength="12" size="12"></li></th>
+                                    <th><p style="padding-left: 5px;" >&#x2198;</p></th>
+                                </tr>
+                                </table>
+                           </ul>
+                            <ul class="matchup" >
+                               <table>
+                                <tr>
+                                    <th><Label>6)</Label></th>
+                               <th><li><input type="text" name="teamname" maxlength="12" size="12"></li></th>
+                                    <th><p style="padding-left: 5px;" >&#x2197;</p></th>
+                                   </tr>
+                                <tr>
+                                    <th><Label>14)</Label></th>
+                               <th><li><input type="text" name="teamname" maxlength="12" size="12"></li></th>
+                                </tr>
+                                </table>
+                           </ul>
+                        </div>
+                       <div class="col-1-8" style="padding-top: 40px;">
+                           <ul class="matchup" >
+                               <table>
+                                <tr>
+                                    <th><Label></Label></th>
+                               <th><li><input type="text" name="teamname" maxlength="12" size="12"></li></th>
+                                    
+                                   </tr>
+                                <tr>
+                                    <th><Label>1)</Label></th>
+                               <th><li><input type="text" name="teamname" maxlength="12" size="12"></li></th>
+                                    <th><p style="padding-left: 5px;" >&#x2198;</p></th>
+                                </tr>
+                                </table>
+                           </ul>
+                            <ul class="matchup" style="padding-left: 25px;">
+                               <table>
+                                <tr>
+                                    <th><Label></Label></th>
+                               <th><li><input type="text" name="teamname" maxlength="12" size="12"></li></th>
+                                    <th><p style="padding-left: 5px;" >&#x2197;</p></th>
+                                   </tr>
+                                <tr>
+                                    <th><Label></Label></th>
+                               <th><li><input type="text" name="teamname" maxlength="12" size="12"></li></th>
+                                </tr>
+                                </table>
+                           </ul>
+                            <ul class="matchup" style="padding-top: 100px;">
+                               <table>
+                                <tr>
+                                    <th><Label></Label></th>
+                               <th><li><input type="text" name="teamname" maxlength="12" size="12"></li></th>
+                                    
+                                   </tr>
+                                <tr>
+                                    <th><Label>2)</Label></th>
+                               <th><li><input type="text" name="teamname" maxlength="12" size="12"></li></th>
+                                    <th><p style="padding-left: 5px;" >&#x2198;</p></th>
+                                </tr>
+                                </table>
+                           </ul>
+                            <ul class="matchup" style="padding-left: 25px;">
+                               <table>
+                                <tr>
+                                    <th><Label></Label></th>
+                               <th><li><input type="text" name="teamname" maxlength="12" size="12"></li></th>
+                                    <th><p style="padding-left: 5px;" >&#x2197;</p></th>
+                                   </tr>
+                                <tr>
+                                    <th><Label></Label></th>
+                               <th><li><input type="text" name="teamname" maxlength="12" size="12"></li></th>
+                                </tr>
+                                </table>
+                           </ul>
+                        </div>
+                       <div class="col-1-8" style="padding-top: 35px;">
+                           <div class="round-two-top">
+                               <ul class="matchup">
+                               <table>
+                                <tr>
+                                    <th><Label></Label></th>
+                               <th><li><input type="text" name="teamname" maxlength="12" size="12"></li></th>
+                                   </tr>
+                                <tr>
+                                    <th><Label></Label></th>
+                               <th><li><input type="text" name="teamname" maxlength="12" size="12"></li></th>
+                                    <th><p style="padding-left: 5px;" >&#x2198;</p></th>
+                                </tr>
+                                </table>
+                               </ul>
+                           </div>
+                            <div class="round-two-top" style="padding-top: 175px;">
+                               <ul class="matchup">
+                               <table>
+                                <tr>
+                                    <th><Label></Label></th>
+                               <th><li><input type="text" name="teamname" maxlength="12" size="12"></li></th>
+                                    <th><p style="padding-left: 5px;" >&#x2197;</p></th>
+                                   </tr>
+                                <tr>
+                                    <th><Label></Label></th>
+                               <th><li><input type="text" name="teamname" maxlength="12" size="12"></li></th>
+                                </tr>
+                                </table>
+                               </ul>
+                           </div>
+                       </div>
+                        <div class="col-1-8"  style="padding-top: 80px;">
+                           <div class="round-two-top" style="padding-top: 125px;">
+                               <ul class="matchup">
+                                <li><input type="text" name="teamname" maxlength="12" size="12"></li>
+                               <li><input type="text" name="teamname" maxlength="12" size="12"></li> 
+                               </ul>
+                           </div>
+                       </div>
+                       <div class="col-1-8">
+                           <div class="round-two-top" style="padding-top: 200px;">
+                               <ul class="matchup">
+                                <Label>Winner!</Label>
+                               <li><input type="text" name="teamname" maxlength="12" size="12"></li> 
+                               </ul>
+                           </div>
+                       </div>
+                   </div><br><br><!-- /row -->
+                   <div style="text-align: center"><button class="button" onclick="myFunction()">Print</button></div>
+               </div> <!-- /container -->
+           </div>
+    </div>
+            
+            
+<div id = "f12" style="display:none">
+           <div id="page">
+	           <div class="container">
+                    <div style="text-align: center">  
+                        <div class="tourname">
+                            <h2>Tournament Name</h2><br>
+                            <h3><input type="text" name="tourname" size="35"></h3>
+                        </div>
+                        <div class="tourdate"><br>
+                            <label><h4>Date</h4></label>
+                            <h4><input type="date" name="tourdate"></h4>
+                        </div>
+                   </div>
+                   <label style="padding-left: 20px;">Team Brackets</label>
+                   <br>
+                   <br>
+                   <br> 
+                   <div class="row">
+                    <div class="col-1-8" >
+                           <ul class="matchup" style="padding-left: 20px;">
+                               <table>
+                                <tr>
+                                    <th><Label>8)</Label></th>
+                               <th><li><input type="text" name="teamname" maxlength="12" size="12"></li></th>
+                                   </tr>
+                                <tr>
+                                    <th><Label>9)</Label></th>
+                               <th><li><input type="text" name="teamname" maxlength="12" size="12"></li></th>
+                                    <th><p style="padding-left: 5px;" >&#x2198;</p></th>
+                                </tr>
+                                </table>
+                           </ul>
+                        <ul class="matchup" >
+                               <table>
+                                <tr>
+                                    <th><Label>2)</Label></th>
+                               <th><li><input type="text" name="teamname" maxlength="12" size="12"></li></th>
+                                   </tr>
+                                <tr>
+                                    <th><Label>10)</Label></th>
+                               <th><li><input type="text" name="teamname" maxlength="12" size="12"></li></th>
+                                    <th><p style="padding-left: 5px;" >&#x2198;</p></th>
+                                </tr>
+                                </table>
+                           </ul>
+                        <ul class="matchup" >
+                               <table>
+                                <tr>
+                                    <th><Label>3)</Label></th>
+                               <th><li><input type="text" name="teamname" maxlength="12" size="12"></li></th>
+                                    <th><p style="padding-left: 5px;" >&#x2197;</p></th>
+                                   </tr>
+                                <tr>
+                                    <th><Label>11)</Label></th>
+                               <th><li><input type="text" name="teamname" maxlength="12" size="12"></li></th>
+                                </tr>
+                                </table>
+                           </ul>
+                        <ul class="matchup">
+                               <table>
+                                <tr>
+                                    <th><Label>4)</Label></th>
+                               <th><li><input type="text" name="teamname" maxlength="12" size="12"></li></th>
+                                   </tr>
+                                <tr>
+                                    <th><Label>12)</Label></th>
+                               <th><li><input type="text" name="teamname" maxlength="12" size="12"></li></th>
+                                    <th><p style="padding-left: 5px;" >&#x2198;</p></th>
+                                </tr>
+                                </table>
+                           </ul>
+                            <ul class="matchup">
+                               <table>
+                                <tr>
+                                    <th><Label>5)</Label></th>
+                               <th><li><input type="text" name="teamname" maxlength="12" size="12"></li></th>
+                                    <th><p style="padding-left: 5px;" >&#x2197;</p></th>
+                                   </tr>
+                                <tr>
+                                    <th><Label>13)</Label></th>
+                               <th><li><input type="text" name="teamname" maxlength="12" size="12"></li></th>
+                                </tr>
+                                </table>
+                           </ul>
+                        <ul class="matchup">
+                               <table>
+                                <tr>
+                                    <th><Label>6)</Label></th>
+                               <th><li><input type="text" name="teamname" maxlength="12" size="12"></li></th>
+                                   </tr>
+                                <tr>
+                                    <th><Label>14)</Label></th>
+                               <th><li><input type="text" name="teamname" maxlength="12" size="12"></li></th>
+                                    <th><p style="padding-left: 5px;" >&#x2198;</p></th>
+                                </tr>
+                                </table>
+                           </ul>
+                            <ul class="matchup" >
+                               <table>
+                                <tr>
+                                    <th><Label>7)</Label></th>
+                               <th><li><input type="text" name="teamname" maxlength="12" size="12"></li></th>
+                                    <th><p style="padding-left: 5px;" >&#x2197;</p></th>
+                                   </tr>
+                                <tr>
+                                    <th><Label>15)</Label></th>
+                               <th><li><input type="text" name="teamname" maxlength="12" size="12"></li></th>
+                                </tr>
+                                </table>
+                           </ul>
+                        </div>
+                       <div class="col-1-8" style="padding-top: 40px;">
+                           <ul class="matchup" >
+                               <table>
+                                <tr>
+                                    <th><Label></Label></th>
+                               <th><li><input type="text" name="teamname" maxlength="12" size="12"></li></th>
+                                    
+                                   </tr>
+                                <tr>
+                                    <th><Label>1)</Label></th>
+                               <th><li><input type="text" name="teamname" maxlength="12" size="12"></li></th>
+                                    <th><p style="padding-left: 5px;" >&#x2198;</p></th>
+                                </tr>
+                                </table>
+                           </ul>
+                            <ul class="matchup" style="padding-left: 25px;">
+                               <table>
+                                <tr>
+                                    <th><Label></Label></th>
+                               <th><li><input type="text" name="teamname" maxlength="12" size="12"></li></th>
+                                    <th><p style="padding-left: 5px;" >&#x2197;</p></th>
+                                   </tr>
+                                <tr>
+                                    <th><Label></Label></th>
+                               <th><li><input type="text" name="teamname" maxlength="12" size="12"></li></th>
+                                </tr>
+                                </table>
+                           </ul>
+                            <ul class="matchup" style="padding-top: 90px; padding-left: 25px;">
+                               <table>
+                                <tr>
+                                    <th><Label></Label></th>
+                               <th><li><input type="text" name="teamname" maxlength="12" size="12"></li></th>
+                                    
+                                   </tr>
+                                <tr>
+                                    <th><Label></Label></th>
+                               <th><li><input type="text" name="teamname" maxlength="12" size="12"></li></th>
+                                    <th><p style="padding-left: 5px;" >&#x2198;</p></th>
+                                </tr>
+                                </table>
+                           </ul>
+                            <ul class="matchup" style="padding-left: 25px; padding-top: 90px;">
+                               <table>
+                                <tr>
+                                    <th><Label></Label></th>
+                               <th><li><input type="text" name="teamname" maxlength="12" size="12"></li></th>
+                                    <th><p style="padding-left: 5px;" >&#x2197;</p></th>
+                                   </tr>
+                                <tr>
+                                    <th><Label></Label></th>
+                               <th><li><input type="text" name="teamname" maxlength="12" size="12"></li></th>
+                                </tr>
+                                </table>
+                           </ul>
+                        </div>
+                       <div class="col-1-8">
+                           <div class="round-two-top">
+                               <ul class="matchup" style="padding-top: 45px;">
+                               <table>
+                                <tr>
+                                    <th><Label></Label></th>
+                               <th><li><input type="text" name="teamname" maxlength="12" size="12"></li></th>
+                                   </tr>
+                                <tr>
+                                    <th><Label></Label></th>
+                               <th><li><input type="text" name="teamname" maxlength="12" size="12"></li></th>
+                                    <th><p style="padding-left: 5px;" >&#x2198;</p></th>
+                                </tr>
+                                </table>
+                               </ul>
+                           </div>
+                            <div class="round-two-top" style="padding-top: 200px;">
+                               <ul class="matchup">
+                               <table>
+                                <tr>
+                                    <th><Label></Label></th>
+                               <th><li><input type="text" name="teamname" maxlength="12" size="12"></li></th>
+                                    <th><p style="padding-left: 5px;" >&#x2197;</p></th>
+                                   </tr>
+                                <tr>
+                                    <th><Label></Label></th>
+                               <th><li><input type="text" name="teamname" maxlength="12" size="12"></li></th>
+                                </tr>
+                                </table>
+                               </ul>
+                           </div>
+                       </div>
+                        <div class="col-1-8"  style="padding-top: 90px;">
+                           <div class="round-two-top" style="padding-top: 125px;">
+                               <ul class="matchup">
+                                <li><input type="text" name="teamname" maxlength="12" size="12"></li>
+                               <li><input type="text" name="teamname" maxlength="12" size="12"></li> 
+                               </ul>
+                           </div>
+                       </div>
+                       <div class="col-1-8">
+                           <div class="round-two-top" style="padding-top: 210px;">
+                               <ul class="matchup">
+                                <Label>Winner!</Label>
+                               <li><input type="text" name="teamname" maxlength="12" size="12"></li> 
+                               </ul>
+                           </div>
+                       </div>
+                   </div><br><br><!-- /row -->
+                   <div style="text-align: center"><button class="button" onclick="myFunction()">Print</button></div>
+               </div> <!-- /container -->
+           </div>
+    </div>
+
+            
+<div id = "f13" style="display:none">
+           <div id="page">
+	           <div class="container">
+                    <div style="text-align: center">  
+                        <div class="tourname">
+                            <h2>Tournament Name</h2><br>
+                            <h3><input type="text" name="tourname" size="35"></h3>
+                        </div>
+                        <div class="tourdate"><br>
+                            <label><h4>Date</h4></label>
+                            <h4><input type="date" name="tourdate"></h4>
+                        </div>
+                   </div>
+                   <label style="padding-left: 20px;">Team Brackets</label>
+                   <br>
+                   <br>
+                   <br> 
+                   <div class="row">
+                    <div class="col-1-8" >
+                           <ul class="matchup" style="padding-left: 20px;">
+                               <table>
+                                <tr>
+                                    <th><Label>1)</Label></th>
+                               <th><li><input type="text" name="teamname" maxlength="12" size="12"></li></th>
+                                   </tr>
+                                <tr>
+                                    <th><Label>2)</Label></th>
+                               <th><li><input type="text" name="teamname" maxlength="12" size="12"></li></th>
+                                    <th><p style="padding-left: 5px;" >&#x2198;</p></th>
+                                </tr>
+                                </table>
+                           </ul>
+                            <ul class="matchup" style="padding-left: 20px;">
+                               <table>
+                                <tr>
+                                    <th><Label>3)</Label></th>
+                               <th><li><input type="text" name="teamname" maxlength="12" size="12"></li></th>
+                                    <th><p style="padding-left: 5px;" >&#x2197;</p></th>
+                                   </tr>
+                                <tr>
+                                    <th><Label>4)</Label></th>
+                               <th><li><input type="text" name="teamname" maxlength="12" size="12"></li></th>
+                                </tr>
+                                </table>
+                           </ul>
+                        <ul class="matchup" >
+                               <table>
+                                <tr>
+                                    <th><Label>5)</Label></th>
+                               <th><li><input type="text" name="teamname" maxlength="12" size="12"></li></th>
+                                   </tr>
+                                <tr>
+                                    <th><Label>6)</Label></th>
+                               <th><li><input type="text" name="teamname" maxlength="12" size="12"></li></th>
+                                    <th><p style="padding-left: 5px;" >&#x2198;</p></th>
+                                </tr>
+                                </table>
+                           </ul>
+                        <ul class="matchup" >
+                               <table>
+                                <tr>
+                                    <th><Label>7)</Label></th>
+                               <th><li><input type="text" name="teamname" maxlength="12" size="12"></li></th>
+                                    <th><p style="padding-left: 5px;" >&#x2197;</p></th>
+                                   </tr>
+                                <tr>
+                                    <th><Label>8)</Label></th>
+                               <th><li><input type="text" name="teamname" maxlength="12" size="12"></li></th>
+                                </tr>
+                                </table>
+                           </ul>
+                        <ul class="matchup">
+                               <table>
+                                <tr>
+                                    <th><Label>9)</Label></th>
+                               <th><li><input type="text" name="teamname" maxlength="12" size="12"></li></th>
+                                   </tr>
+                                <tr>
+                                    <th><Label>10)</Label></th>
+                               <th><li><input type="text" name="teamname" maxlength="12" size="12"></li></th>
+                                    <th><p style="padding-left: 5px;" >&#x2198;</p></th>
+                                </tr>
+                                </table>
+                           </ul>
+                            <ul class="matchup">
+                               <table>
+                                <tr>
+                                    <th><Label>11)</Label></th>
+                               <th><li><input type="text" name="teamname" maxlength="12" size="12"></li></th>
+                                    <th><p style="padding-left: 5px;" >&#x2197;</p></th>
+                                   </tr>
+                                <tr>
+                                    <th><Label>12)</Label></th>
+                               <th><li><input type="text" name="teamname" maxlength="12" size="12"></li></th>
+                                </tr>
+                                </table>
+                           </ul>
+                        <ul class="matchup">
+                               <table>
+                                <tr>
+                                    <th><Label>13)</Label></th>
+                               <th><li><input type="text" name="teamname" maxlength="12" size="12"></li></th>
+                                   </tr>
+                                <tr>
+                                    <th><Label>14)</Label></th>
+                               <th><li><input type="text" name="teamname" maxlength="12" size="12"></li></th>
+                                    <th><p style="padding-left: 5px;" >&#x2198;</p></th>
+                                </tr>
+                                </table>
+                           </ul>
+                            <ul class="matchup" >
+                               <table>
+                                <tr>
+                                    <th><Label>15)</Label></th>
+                               <th><li><input type="text" name="teamname" maxlength="12" size="12"></li></th>
+                                    <th><p style="padding-left: 5px;" >&#x2197;</p></th>
+                                   </tr>
+                                <tr>
+                                    <th><Label>16)</Label></th>
+                               <th><li><input type="text" name="teamname" maxlength="12" size="12"></li></th>
+                                </tr>
+                                </table>
+                           </ul>
+                        </div>
+                       <div class="col-1-8" >
+                           <ul class="matchup" style="padding-top: 50px; padding-left: 25px;">
+                               <table>
+                                <tr>
+                                    <th><Label></Label></th>
+                               <th><li><input type="text" name="teamname" maxlength="12" size="12"></li></th>
+                                    
+                                   </tr>
+                                <tr>
+                                    <th><Label></Label></th>
+                               <th><li><input type="text" name="teamname" maxlength="12" size="12"></li></th>
+                                    <th><p style="padding-left: 5px;" >&#x2198;</p></th>
+                                </tr>
+                                </table>
+                           </ul>
+                            <ul class="matchup" style="padding-left: 25px; padding-top: 95px;">
+                               <table>
+                                <tr>
+                                    <th><Label></Label></th>
+                               <th><li><input type="text" name="teamname" maxlength="12" size="12"></li></th>
+                                    <th><p style="padding-left: 5px;" >&#x2197;</p></th>
+                                   </tr>
+                                <tr>
+                                    <th><Label></Label></th>
+                               <th><li><input type="text" name="teamname" maxlength="12" size="12"></li></th>
+                                </tr>
+                                </table>
+                           </ul>
+                            <ul class="matchup" style="padding-top: 90px; padding-left: 25px;">
+                               <table>
+                                <tr>
+                                    <th><Label></Label></th>
+                               <th><li><input type="text" name="teamname" maxlength="12" size="12"></li></th>
+                                    
+                                   </tr>
+                                <tr>
+                                    <th><Label></Label></th>
+                               <th><li><input type="text" name="teamname" maxlength="12" size="12"></li></th>
+                                    <th><p style="padding-left: 5px;" >&#x2198;</p></th>
+                                </tr>
+                                </table>
+                           </ul>
+                            <ul class="matchup" style="padding-left: 25px; padding-top: 90px;">
+                               <table>
+                                <tr>
+                                    <th><Label></Label></th>
+                               <th><li><input type="text" name="teamname" maxlength="12" size="12"></li></th>
+                                    <th><p style="padding-left: 5px;" >&#x2197;</p></th>
+                                   </tr>
+                                <tr>
+                                    <th><Label></Label></th>
+                               <th><li><input type="text" name="teamname" maxlength="12" size="12"></li></th>
+                                </tr>
+                                </table>
+                           </ul>
+                        </div>
+                       <div class="col-1-8">
+                           <div class="round-two-top">
+                               <ul class="matchup" style="padding-top: 85px;">
+                               <table>
+                                <tr>
+                                    <th><Label></Label></th>
+                               <th><li><input type="text" name="teamname" maxlength="12" size="12"></li></th>
+                                   </tr>
+                                <tr>
+                                    <th><Label></Label></th>
+                               <th><li><input type="text" name="teamname" maxlength="12" size="12"></li></th>
+                                    <th><p style="padding-left: 5px;" >&#x2198;</p></th>
+                                </tr>
+                                </table>
+                               </ul>
+                           </div>
+                            <div class="round-two-top" style="padding-top: 245px;">
+                               <ul class="matchup">
+                               <table>
+                                <tr>
+                                    <th><Label></Label></th>
+                               <th><li><input type="text" name="teamname" maxlength="12" size="12"></li></th>
+                                    <th><p style="padding-left: 5px;" >&#x2197;</p></th>
+                                   </tr>
+                                <tr>
+                                    <th><Label></Label></th>
+                               <th><li><input type="text" name="teamname" maxlength="12" size="12"></li></th>
+                                </tr>
+                                </table>
+                               </ul>
+                           </div>
+                       </div>
+                        <div class="col-1-8"  style="padding-top: 155px;">
+                           <div class="round-two-top" style="padding-top: 125px;">
+                               <ul class="matchup">
+                                <li><input type="text" name="teamname" maxlength="12" size="12"></li>
+                               <li><input type="text" name="teamname" maxlength="12" size="12"></li> 
+                               </ul>
+                           </div>
+                       </div>
+                       <div class="col-1-8">
+                           <div class="round-two-top" style="padding-top: 280px;">
+                               <ul class="matchup">
+                                <Label>Winner!</Label>
+                               <li><input type="text" name="teamname" maxlength="12" size="12"></li> 
+                               </ul>
+                           </div>
+                       </div>
+                   </div><br><br><!-- /row -->
+                   <div style="text-align: center"><button class="button" onclick="myFunction()">Print</button></div>
+               </div> <!-- /container -->
+           </div>
+    </div>
+
+			<div id="foot">
+				<div class="container">
+					WEB SYSTEMS AND TECHNOLOGIES 2018
+				</div>
+			</div>
+			
+		</div>
+	</body>
+    
+    
+<script>
+function myReload() {
+    location.reload();
+}
+</script>
+
+<script type="text/javascript">
+    function showForm() {
+        var selopt = document.getElementById("opts").value;
+        if (selopt == 1) {
+            document.getElementById("f1").style.display = "block";
+            document.getElementById("f2").style.display = "none";
+        }
+        if (selopt == 2) {
+            document.getElementById("f2").style.display = "block";
+            document.getElementById("f1").style.display = "none";
+        }
+        if (selopt == 3) {
+            document.getElementById("f3").style.display = "block";
+            document.getElementById("f2").style.display = "none";
+            document.getElementById("f1").style.display = "none";
+        }
+        if (selopt == 4) {
+            document.getElementById("f4").style.display = "block";
+            document.getElementById("f3").style.display = "none";
+            document.getElementById("f2").style.display = "none";
+            document.getElementById("f1").style.display = "none";
+        }
+        if (selopt == 5) {
+            document.getElementById("f5").style.display = "block";
+            document.getElementById("f4").style.display = "none";
+            document.getElementById("f3").style.display = "none";
+            document.getElementById("f2").style.display = "none";
+            document.getElementById("f1").style.display = "none";
+        }
+        if (selopt == 6) {
+            document.getElementById("f6").style.display = "block";
+            document.getElementById("f5").style.display = "none";
+            document.getElementById("f4").style.display = "none";
+            document.getElementById("f3").style.display = "none";
+            document.getElementById("f2").style.display = "none";
+            document.getElementById("f1").style.display = "none";
+        }
+        if (selopt == 7) {
+            document.getElementById("f7").style.display = "block";
+            document.getElementById("f6").style.display = "none";
+            document.getElementById("f5").style.display = "none";
+            document.getElementById("f4").style.display = "none";
+            document.getElementById("f3").style.display = "none";
+            document.getElementById("f2").style.display = "none";
+            document.getElementById("f1").style.display = "none";
+        }
+        if (selopt == 8) {
+            document.getElementById("f8").style.display = "block";
+            document.getElementById("f7").style.display = "none";
+            document.getElementById("f6").style.display = "none";
+            document.getElementById("f5").style.display = "none";
+            document.getElementById("f4").style.display = "none";
+            document.getElementById("f3").style.display = "none";
+            document.getElementById("f2").style.display = "none";
+            document.getElementById("f1").style.display = "none";
+        }
+        if (selopt == 9) {
+            document.getElementById("f9").style.display = "block";
+            document.getElementById("f8").style.display = "none";
+            document.getElementById("f7").style.display = "none";
+            document.getElementById("f6").style.display = "none";
+            document.getElementById("f5").style.display = "none";
+            document.getElementById("f4").style.display = "none";
+            document.getElementById("f3").style.display = "none";
+            document.getElementById("f2").style.display = "none";
+            document.getElementById("f1").style.display = "none";
+        }
+        if (selopt == 10) {
+            document.getElementById("f10").style.display = "block";
+            document.getElementById("f9").style.display = "none";
+            document.getElementById("f8").style.display = "none";
+            document.getElementById("f7").style.display = "none";
+            document.getElementById("f6").style.display = "none";
+            document.getElementById("f5").style.display = "none";
+            document.getElementById("f4").style.display = "none";
+            document.getElementById("f3").style.display = "none";
+            document.getElementById("f2").style.display = "none";
+            document.getElementById("f1").style.display = "none";
+        }
+        if (selopt == 11) {
+            document.getElementById("f11").style.display = "block";
+            document.getElementById("f10").style.display = "none";
+            document.getElementById("f9").style.display = "none";
+            document.getElementById("f8").style.display = "none";
+            document.getElementById("f7").style.display = "none";
+            document.getElementById("f6").style.display = "none";
+            document.getElementById("f5").style.display = "none";
+            document.getElementById("f4").style.display = "none";
+            document.getElementById("f3").style.display = "none";
+            document.getElementById("f2").style.display = "none";
+            document.getElementById("f1").style.display = "none";
+        }
+        if (selopt == 12) {
+            document.getElementById("f12").style.display = "block";
+            document.getElementById("f11").style.display = "none";
+            document.getElementById("f10").style.display = "none";
+            document.getElementById("f9").style.display = "none";
+            document.getElementById("f8").style.display = "none";
+            document.getElementById("f7").style.display = "none";
+            document.getElementById("f6").style.display = "none";
+            document.getElementById("f5").style.display = "none";
+            document.getElementById("f4").style.display = "none";
+            document.getElementById("f3").style.display = "none";
+            document.getElementById("f2").style.display = "none";
+            document.getElementById("f1").style.display = "none";
+        }
+        if (selopt == 13) {
+            document.getElementById("f13").style.display = "block";
+            document.getElementById("f12").style.display = "none";
+            document.getElementById("f11").style.display = "none";
+            document.getElementById("f10").style.display = "none";
+            document.getElementById("f9").style.display = "none";
+            document.getElementById("f8").style.display = "none";
+            document.getElementById("f7").style.display = "none";
+            document.getElementById("f6").style.display = "none";
+            document.getElementById("f5").style.display = "none";
+            document.getElementById("f4").style.display = "none";
+            document.getElementById("f3").style.display = "none";
+            document.getElementById("f2").style.display = "none";
+            document.getElementById("f1").style.display = "none";
+        }
+}
+    
+</script>
+    
+<script>
+    function myFunction() {
+    window.print();
+    }
+</script>
+</html>
