@@ -13,7 +13,7 @@ self.addEventListener('install', function(e) {
        '/jss/init.js',
        '/jss/skel.min.js',
        '/jss/skel-panels.min.js',
-       '/json/manifest.json',
+       '/json/manifest.json.json',
        '/json/icons/icon48',
        '/json/icons/icon96',
        '/json/icons/icon128',
