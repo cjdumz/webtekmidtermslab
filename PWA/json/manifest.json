@@ -1,6 +1,6 @@
 {
-  "short_name": "TBG",
-  "name": "Tournament Bracket Generator",
+  "short_name": "MMG",
+  "name": "Matchmaking Generator",
   "start_url": "index.html?launcher=true",
   "background_color": "#2196F3",
   "icons": [
